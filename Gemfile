@@ -23,6 +23,8 @@ end
 gem 'jquery-rails'
 gem 'sass-twitter-bootstrap-rails'
 
+gem 'devise'
+
 gem 'rspec-rails' , group: [ :test , :development ]
 
 # To use ActiveModel has_secure_password
