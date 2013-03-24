@@ -25,6 +25,8 @@ gem 'jquery-rails'
 gem 'sass-twitter-bootstrap-rails'
 
 gem 'devise'
+gem 'httparty'
+gem 'kaminari'
 
 gem 'rspec-rails' , group: [ :test , :development ]
 
