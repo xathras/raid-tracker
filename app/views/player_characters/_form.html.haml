@@ -1,0 +1,19 @@
+- if player_character.errors.any?
+  .alert.alert-error
+    - player_character.errors.full_messages.each do |message|
+      = message
+= form_for player_character do |f|
+  .control-group
+    = f.label :name
+    .controls
+      = f.text_field :name
+  .control-group
+    = f.label :realm
+    .controls
+      = f.text_field :realm
+  .control-group
+    = f.label :raid_team_id
+    .controls
+      = f.collection_select :raid_team_id , RaidTeam.all , :id , :name , include_blank: '(Select)'
+  .control-group
+    = f.submit class: 'btn btn-primary'

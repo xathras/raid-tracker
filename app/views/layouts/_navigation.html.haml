@@ -1,0 +1,11 @@
+.navbar.navbar-inverse
+  .navbar-inner
+    .container
+      %button{ type: 'button' , class: 'btn btn-navbar' , data: { toggle: 'collapse' , target: '.nav-collapse' } }
+      = link_to 'CTR Raid Tracker' , '#' , class: 'brand'
+      .nav-collapse.collapse
+        %ul.nav
+          %li{ class: params[:controller] == 'raid_teams' ? 'active' : nil }
+            = link_to 'Raid Teams' , raid_teams_path
+          %li{ class: params[:controller] == 'player_characters' ? 'active' : nil }
+            = link_to 'Player Characters' , player_characters_path

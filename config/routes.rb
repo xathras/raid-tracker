@@ -1,6 +1,16 @@
 RaidTracker::Application.routes.draw do
   devise_for :users
 
+  root to: 'raid_teams#index'
+
+  resources :raid_teams
+
+  resources :player_characters do
+    member do
+      post 'update_profile'
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

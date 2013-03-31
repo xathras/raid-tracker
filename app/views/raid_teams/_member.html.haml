@@ -1,0 +1,7 @@
+%tr
+  %td
+    = member.name
+  %td
+    = member.average_ilevel
+  %td
+    = link_to 'Update Profile' , update_profile_player_character_path( member ) , method: 'post'

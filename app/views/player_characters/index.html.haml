@@ -1,0 +1,8 @@
+%h1 Player Characters
+= link_to 'New Player Character' , new_player_character_path , class: 'btn'
+%table
+  %tr
+    %th Name
+    %th Average iLevel
+  = render collection: player_characters , partial: 'player_character'
+= paginate player_characters

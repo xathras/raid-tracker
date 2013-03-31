@@ -27,6 +27,8 @@ gem 'sass-twitter-bootstrap-rails'
 gem 'devise'
 gem 'httparty'
 gem 'kaminari'
+gem 'haml'
+gem 'quiet_assets'
 
 gem 'rspec-rails' , group: [ :test , :development ]
 

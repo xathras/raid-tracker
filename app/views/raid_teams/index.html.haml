@@ -1,0 +1,9 @@
+%p
+  = link_to 'New Team' , new_raid_team_path , class: 'btn'
+  %table
+    %tr
+      %th
+        Name
+      %th
+    = render collection: raid_teams , partial: 'raid_team'
+  = paginate raid_teams

@@ -1,0 +1,9 @@
+%p
+  %h1
+    = raid_team.name
+  %h2 Primaries
+  %table
+    %tr
+      %th Name
+      %th Average iLevel
+    = render collection: raid_team.members.order( 'average_ilevel' ) , partial: 'raid_teams/member'

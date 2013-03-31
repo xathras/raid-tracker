@@ -1,5 +1,20 @@
 class RaidTeamsController < ApplicationController
-  
+
+  def create
+    if raid_team.save
+      redirect_to raid_teams_path
+    else
+      render action: 'new'
+    end
+  end
+
+  def destroy
+    raid_team.destroy
+    respond_to do |format|
+      format.html { redirect_to raid_teams_path }
+      format.js { render text: "window.location = '#{raid_teams_path}'" }
+    end
+  end
 
 protected
   def raid_team
@@ -11,7 +26,7 @@ protected
   end
 
   def raid_teams
-    @raid_teams ||= RaidTeams.page( params[:page] )
+    @raid_teams ||= RaidTeam.page( params[:page] )
   end
 
   helper_method :raid_team , :raid_teams
